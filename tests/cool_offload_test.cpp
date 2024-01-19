@@ -127,20 +127,7 @@ public:
   complex_work_data m_data;
 };
 
-class CoolOffloadTest : public ::testing::Test {
-public:
-  void setup(std::size_t buffer_size) {
-    m_buffer.resize(buffer_size);
-  }
-
-  void SetUp() override {
-    setup(1024);
-  }
-
-  std::vector<std::byte> m_buffer;
-};
-
-TEST_F(CoolOffloadTest, Basic) {
+TEST(CoolOffloadTest, Basic) {
 
   offload_worker worker;
   thread_context ctx = worker.create_context();
