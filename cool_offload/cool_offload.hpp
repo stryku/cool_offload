@@ -8,17 +8,7 @@
 
 namespace cool_offload {
 
-class i_offloaded_work_executor;
-
 using work_type_id_t = std::size_t;
-
-namespace detail {
-
-extern std::vector<std::unique_ptr<i_offloaded_work_executor>>
-    g_work_type_register;
-extern std::mutex g_work_type_register_mutex;
-
-} // namespace detail
 
 class i_offloaded_work_executor {
 public:
