@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.16 FATAL_ERROR)
 project(cool_offload)
 
 add_compile_options(-stdlib=libc++)
-add_link_options(-stdlib=libc++ -lc++abi)
+add_link_options(-stdlib=libc++ -lc++abi -fuse-ld=lld)
 
 include(FetchContent)
 
